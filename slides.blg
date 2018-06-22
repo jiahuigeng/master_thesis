@@ -1,0 +1,72 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: slides.aux
+The style file: i6bibliostyle.bst
+Database file #1: references.bib
+Warning--there's no month in artetxe2017learning
+`volume' is a missing field, not a string, for entry artetxe2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+"" is a string literal, not an integer, for entry artetxe2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry artetxe2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry conneau2017word
+while executing---line 1403 of file i6bibliostyle.bst
+"" is a string literal, not an integer, for entry conneau2017word
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry conneau2017word
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry hoshen2018iterative
+while executing---line 1403 of file i6bibliostyle.bst
+"" is a string literal, not an integer, for entry hoshen2018iterative
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry hoshen2018iterative
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry lample2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+"" is a string literal, not an integer, for entry lample2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry lample2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+You've used 5 entries,
+            2596 wiz_defined-function locations,
+            595 strings with 5499 characters,
+and the built_in function-call counts, 1987 in all, are:
+= -- 188
+> -- 105
+< -- 7
++ -- 36
+- -- 34
+* -- 180
+:= -- 325
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 32
+chr.to.int$ -- 4
+cite$ -- 6
+duplicate$ -- 83
+empty$ -- 121
+format.name$ -- 49
+if$ -- 392
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 5
+newline$ -- 23
+num.names$ -- 15
+pop$ -- 30
+preamble$ -- 1
+purify$ -- 42
+quote$ -- 0
+skip$ -- 73
+stack$ -- 0
+substring$ -- 63
+swap$ -- 25
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 40
+warning$ -- 1
+while$ -- 13
+width$ -- 8
+write$ -- 63
+(There were 12 error messages)

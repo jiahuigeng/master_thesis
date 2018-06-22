@@ -1,0 +1,30 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect{Artetxe \& Labaka$^+$} 17a]{artetxe2017learning}
+M.~Artetxe, G.~Labaka, E.~Agirre: \newblock Learning bilingual word embeddings
+  with (almost) no bilingual data.
+\newblock In {\em Proceedings of the 55th Annual Meeting of the Association for
+  Computational Linguistics (Volume 1: Long Papers)}, Vol.~1, pp. 451--462,
+  2017.
+
+\bibitem[\protect{Artetxe \& Labaka$^+$} 17b]{artetxe2017unsupervised}
+M.~Artetxe, G.~Labaka, E.~Agirre, K.~Cho: \newblock Unsupervised neural machine
+  translation.
+\newblock {\em arXiv preprint arXiv:1710.11041}, Vol., 2017.
+
+\bibitem[\protect{Conneau \& Lample$^+$} 17]{conneau2017word}
+A.~Conneau, G.~Lample, M.~Ranzato, L.~Denoyer, H.~J{\'e}gou: \newblock Word
+  translation without parallel data.
+\newblock {\em arXiv preprint arXiv:1710.04087}, Vol., 2017.
+
+\bibitem[\protect{Hoshen \& Wolf} 18]{hoshen2018iterative}
+Y.~Hoshen, L.~Wolf: \newblock An Iterative Closest Point Method for
+  Unsupervised Word Translation.
+\newblock {\em arXiv preprint arXiv:1801.06126}, Vol., 2018.
+
+\bibitem[\protect{Lample \& Denoyer$^+$} 17]{lample2017unsupervised}
+G.~Lample, L.~Denoyer, M.~Ranzato: \newblock Unsupervised Machine Translation
+  Using Monolingual Corpora Only.
+\newblock {\em arXiv preprint arXiv:1711.00043}, Vol., 2017.
+
+\end{thebibliography}
