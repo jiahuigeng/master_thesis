@@ -13,6 +13,7 @@
 %\usepackage[noend]{algpseudocode}
 \usepackage[ruled,linesnumbered]{algorithm2e}
 \usepackage{bm}
+\usepackage{enumerate}
 
 % slides tunning
 % \setlength{\footskip}{0pt} % default ist +30pt - negative Werte nicht moeglich
@@ -122,50 +123,12 @@
 			\item Overcome the lack of reference translations
 			\item Rich monolingual sentence resource \\
 		\end{itemize}
-		\item Why artificial neural network (ANN) for lexicon?
-		\begin{itemize}
-			\item Easy integration of
-			(possibly unlimited) source side contexts
-			\item Implicit smoothing for rare words
-			\item Flexible model capacity: cover large vocabularies with low memory requirement\\
-		\end{itemize}
-		\item Why cross-lingual word embedding?
-		\begin{itemize}
-			
-			\item Enable cross-lingual similarity calculations
-			\item Enable knowledge transfer between languages
-		\end{itemize}
+
 		
 	\end{description}
 	\vfill
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline {Thesis Goal}	
-	Goal: unsupervised system using word lexicon/embedding models without artificial rearrangement of alignments
-	\begin{itemize}
-		\item Directly applicable to practical tasks, easier to convince the community
-		\item Can be used in 1:1 or almost 1:1 tasks: tagging, summary translation
-		\item Can be used as the initial model of iterative back-translation for NMT\\
-	\end{itemize}
-	Tasks
-	\begin{itemize}
-		\item 	ANN lexicon
-		\begin{itemize}
-			\item Implement and test EM-style training algorithm
-			\item Implement different models like word-to-word, context-aware
-		\end{itemize}
-		
-		\item Cross-lingual word embedding
-		\begin{itemize}
-			\item Reproduce results of some state-of-the-art research
-			\item Combine of embedding-based translation models and LM
-		\end{itemize}
-		\item Compare the results of  the above models
-		\item Compare different minimum translation units: word/word-BPE/sentence-BPE
-		
-	\end{itemize}
-	
+
 	
 	
 	
@@ -186,7 +149,7 @@
 		\end{itemize}	    
 		\item \cite{hoshen2018iterative} An Iterative Closest Point Method for Unsupervised Word Translation
 		\begin{itemize}
-			\item Iterative Closest Point Method for unsupervised embedding mapping learning, fewer hyper-parameters, more interpretable
+			\item Iterative Closest Point Method for unsupervised embedding mapping, fewer hyper-parameters, more interpretable
 		\end{itemize}	    
 	\end{itemize}
 	
@@ -227,24 +190,26 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
-	\headline{From Lexicon to Embedding}
+	\headline{Cross-lingual Word Embedding}
 	\vfill
-	Motivation
+
+	Definition
 	\begin{itemize}
-		\item Embeddings are trained on much larger corpora seperately
-		\begin{itemize}
-			\item ANN lexicon model updated within the unsupervised training process
-			\item much more information ${\Rightarrow}$ much more semantic/syntactic information
-		\end{itemize}
-		
-		\item From discrete to continuous vector representation\\
-		
+		\item Word embedding of multiple languages in a joint embedding space		\\
 	\end{itemize}
-	How do we do with word embedding?
+	Roles in unsupervised machine translation 
 	\begin{itemize}
-		\item Translation of source embedding to target embedding
-		\item Decision rule for target word given target embedding
-		\item Training of embedding models for translation purpose
+		\item Initilization
+			\begin{itemize}
+				\item Populate the initial phrase tables using scores from cross-lingual embeddings
+				\item Preserve some of the original semantics
+			\end{itemize}
+		\item Shared Latent representations
+			\begin{itemize}
+				\item Shared encoder for producing a language independent representation
+				\item Enable back-translation further improvement of results
+			\end{itemize}
+		
 	\end{itemize}
 	\vfill
 
@@ -259,7 +224,6 @@
 			\end{itemize}
 		\item Learn linear mapping between embedding spaces	
 			\begin{itemize}
-				\item Definition
 				\item Supervised learning
 					\begin{itemize}
 						\item Procrustes analysis
@@ -281,21 +245,14 @@
 	\NewPage
 	\headline{Cross-lingual Word Embedding}
 	\vfill
-	Definition
-	\begin{itemize}
-		\item Word embedding of multiple languages in a joint embedding space		\\
-	\end{itemize}
+
 	
-	Motivation
-	\begin{itemize}
-		\item Enable cross-lingual similarity calculations
-		\item Enable knowledge transfer between languages\\
-	\end{itemize}
+
 	
 	
 	
 	
-	Methods
+	Training Methods
 	\begin{itemize}
 		\item Mapping-based approaches
 		\begin{itemize}
@@ -496,7 +453,9 @@
 	\NewPage
 	\headline{Results}
 	\vfill
+	
 	\begin{table}
+	\setcounter{table}{1}
 	\caption{Translation results on German$\leftrightarrow$English \texttt{newstest2016} and French$\leftrightarrow$English \texttt{newstest2014}.}
 	  \centering
 		\begin{tabular}{lcccc}
@@ -520,7 +479,33 @@
 		\label{tab:results}
 	\end{table}	
 	\vfill
-
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Phrase Embedding}
+	Motivation
+	\begin{itemize}
+		\item Many phrases have a meaning that is not a simple composition of the meaning of its individual words
+	\end{itemize}
+	Phrase detection
+	\begin{itemize}
+		\item Phrases formed based on the unigram and bigram counts
+		\[ score(w_i, w_j) = \frac{count(w_i, w_j) - \delta}{count(w_i)*count(w_j)} \]
+	\end{itemize}
+	Translation performance
+	\begin{itemize}
+		\item Higher threshold, fewer phrases
+		\item Topk: 500 beam size: 30
+	\end{itemize}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c| } 
+			\hline
+			threshold  & 100 & 500 & 2000 \\ 
+			\hline
+			BLEU  & 100 & 13.83 & 13.65 \\ 			
+			\hline
+		\end{tabular}
+	\end{center}
+	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
 	\headline {Outlook}
@@ -568,9 +553,13 @@
 			\bottomrule
 		\end{tabular}
 		\caption{Translation results with different values of denoising parameters.}
+		\setcounter{table}{1}
 		\label{tab:denoising}
 	\end{table}
 	\vfill
+	
+
+	
 	
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -601,6 +590,7 @@
 		\label{tab:vocab}
 	\end{table}
 	\vfill
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\FinalPage
 	
