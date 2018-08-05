@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: slides.aux
 The style file: i6bibliostyle.bst
 Database file #1: references.bib
@@ -10,6 +10,12 @@ while executing---line 1403 of file i6bibliostyle.bst
 "" is a string literal, not an integer, for entry artetxe2017unsupervised
 while executing---line 1403 of file i6bibliostyle.bst
 `volume' is a missing field, not a string, for entry artetxe2017unsupervised
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry artetxe2018robust
+while executing---line 1403 of file i6bibliostyle.bst
+"" is a string literal, not an integer, for entry artetxe2018robust
+while executing---line 1403 of file i6bibliostyle.bst
+`volume' is a missing field, not a string, for entry artetxe2018robust
 while executing---line 1403 of file i6bibliostyle.bst
 `volume' is a missing field, not a string, for entry conneau2017word
 while executing---line 1403 of file i6bibliostyle.bst
@@ -23,12 +29,6 @@ while executing---line 1403 of file i6bibliostyle.bst
 while executing---line 1403 of file i6bibliostyle.bst
 `volume' is a missing field, not a string, for entry hoshen2018iterative
 while executing---line 1403 of file i6bibliostyle.bst
-`volume' is a missing field, not a string, for entry joulin2016fasttext
-while executing---line 1403 of file i6bibliostyle.bst
-"" is a string literal, not an integer, for entry joulin2016fasttext
-while executing---line 1403 of file i6bibliostyle.bst
-`volume' is a missing field, not a string, for entry joulin2016fasttext
-while executing---line 1403 of file i6bibliostyle.bst
 `volume' is a missing field, not a string, for entry lample2017unsupervised
 while executing---line 1403 of file i6bibliostyle.bst
 "" is a string literal, not an integer, for entry lample2017unsupervised
@@ -36,45 +36,45 @@ while executing---line 1403 of file i6bibliostyle.bst
 `volume' is a missing field, not a string, for entry lample2017unsupervised
 while executing---line 1403 of file i6bibliostyle.bst
 Warning--there's no month in mikolov2013distributed
-You've used 8 entries,
+You've used 9 entries,
             2596 wiz_defined-function locations,
-            611 strings with 6268 characters,
-and the built_in function-call counts, 3670 in all, are:
-= -- 350
-> -- 197
-< -- 11
-+ -- 68
-- -- 66
-* -- 329
-:= -- 567
-add.period$ -- 16
-call.type$ -- 8
-change.case$ -- 57
-chr.to.int$ -- 7
-cite$ -- 11
-duplicate$ -- 153
-empty$ -- 231
-format.name$ -- 90
-if$ -- 745
+            615 strings with 6400 characters,
+and the built_in function-call counts, 4029 in all, are:
+= -- 389
+> -- 206
+< -- 12
++ -- 71
+- -- 68
+* -- 363
+:= -- 620
+add.period$ -- 18
+call.type$ -- 9
+change.case$ -- 61
+chr.to.int$ -- 8
+cite$ -- 12
+duplicate$ -- 168
+empty$ -- 259
+format.name$ -- 95
+if$ -- 817
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 8
-newline$ -- 35
-num.names$ -- 24
-pop$ -- 61
+missing$ -- 9
+newline$ -- 39
+num.names$ -- 27
+pop$ -- 64
 preamble$ -- 1
-purify$ -- 73
+purify$ -- 79
 quote$ -- 0
-skip$ -- 140
+skip$ -- 151
 stack$ -- 0
-substring$ -- 153
-swap$ -- 55
-text.length$ -- 10
+substring$ -- 185
+swap$ -- 58
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 72
 warning$ -- 3
-while$ -- 25
-width$ -- 10
-write$ -- 100
+while$ -- 29
+width$ -- 11
+write$ -- 112
 (There were 15 error messages)
