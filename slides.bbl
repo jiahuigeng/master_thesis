@@ -1,5 +1,12 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect{Adams \& Makarucha$^+$} 17]{adams2017cross}
+O.~Adams, A.~Makarucha, G.~Neubig, S.~Bird, T.~Cohn: \newblock Cross-lingual
+  word embeddings for low-resource language modeling.
+\newblock In {\em Proceedings of the 15th Conference of the European Chapter of
+  the Association for Computational Linguistics: Volume 1, Long Papers},
+  Vol.~1, pp. 937--947, 2017.
+
 \bibitem[\protect{Artetxe \& Labaka$^+$} 17a]{artetxe2017learning}
 M.~Artetxe, G.~Labaka, E.~Agirre: \newblock Learning bilingual word embeddings
   with (almost) no bilingual data.
@@ -22,9 +29,20 @@ Y.~Hoshen, L.~Wolf: \newblock An Iterative Closest Point Method for
   Unsupervised Word Translation.
 \newblock {\em arXiv preprint arXiv:1801.06126}, Vol., 2018.
 
+\bibitem[\protect{Joulin \& Grave$^+$} 16]{joulin2016fasttext}
+A.~Joulin, E.~Grave, P.~Bojanowski, M.~Douze, H.~J{\'e}gou, T.~Mikolov:
+  \newblock FastText.zip: Compressing text classification models.
+\newblock {\em arXiv preprint arXiv:1612.03651}, Vol., 2016.
+
 \bibitem[\protect{Lample \& Denoyer$^+$} 17]{lample2017unsupervised}
 G.~Lample, L.~Denoyer, M.~Ranzato: \newblock Unsupervised Machine Translation
   Using Monolingual Corpora Only.
 \newblock {\em arXiv preprint arXiv:1711.00043}, Vol., 2017.
+
+\bibitem[\protect{Mikolov \& Sutskever$^+$} 13]{mikolov2013distributed}
+T.~Mikolov, I.~Sutskever, K.~Chen, G.S. Corrado, J.~Dean: \newblock Distributed
+  representations of words and phrases and their compositionality.
+\newblock In {\em Advances in neural information processing systems}, pp.
+  3111--3119, 2013.
 
 \end{thebibliography}
