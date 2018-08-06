@@ -267,12 +267,9 @@
 		\begin{itemize}
 			\item Procrustes analysis
 		\end{itemize}
-		\item Semi-supervised learning
-		\begin{itemize}
-			\item Iterative self-learning framework 
-		\end{itemize}
 		\item Unsupervised learning
 		\begin{itemize}
+			\item Iterative self-learning framework 			
 			\item Adversarial learning
 		\end{itemize}
 	\end{itemize}
@@ -296,14 +293,11 @@
 	\texttt{Fasttext} \cite{bojanowski2017enriching}
 	\begin{itemize}
 		\item Essentially an extension of skip-gram/CBOW model
-		\item Treat each word as compound of character ${n}$-gram
-		\item Learn the internal structure of words
-		\item Score function between context word $c$ and current word $w$
-		 \[s(w, c) = \sum_{g \in G_{w}} z_g^{T} c \]
-		 \begin{itemize}
-		 \item  ${G_w}$: set of $n$-gram appears in ${w}$ 
-		 \item $z_g$,${v_c}$: the corresponding  embedding
-		 \end{itemize}
+		\item Treat each word as compound of character ${n}$-grams
+		\item Learn the internal structure of words\\
+		
+		\includegraphics[width=0.7\linewidth]{skip}
+		\centering
 	\end{itemize}
 	
 	
@@ -323,7 +317,7 @@
 	
 	
 	Learn a linear mapping ${W \in \mathbb{R}^{d \times d}}$ such that
-	\[W^*= \argmin\limits_{W \in \mathbb{R}^{d \times d}} {\sum_{n=1}^{N} {\lVert Wf_i -e_i \rVert}^2} \]
+	\[W^*= \argmin\limits_{W \in \mathbb{R}^{d \times d}} {\sum_{n=1}^{N} {\lVert Wf_n -e_n \rVert}^2} \]
 	\begin{itemize}
 		\item ${d:}$ Dimension of embedding
 		\item $f_n, e_n \in \mathbb{R}^d $: the embedding pair of corresponding word pair in the dictionary
@@ -344,7 +338,7 @@
 		
 		\begin{itemize}
 			\item A closed-form solution obtained from SVD
-			\item $E$, $F \in \mathbb{R}^{d*N}$ denotes embedding projection of word pairs ${\{e,f\}}$
+			\item $E$, $F \in \mathbb{R}^{d\times N}$ denote embedding projection of word pairs ${\{e,f\}}$
 		\end{itemize}
 		
 		\[ W^* = \argmin\limits_{W \in \mathbb{R}^{d \times d}} {\lVert WF-E\lVert}_F^2  =  UV^T\]
@@ -356,24 +350,24 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\NewPage
-	\headline{Semi-supervised Learning}
+	\headline{Unsupervised Learning}
 	\vfill
 	Problem
 	\begin{itemize}
 		\item Large dictionary not readily available for many language pairs\\
 	\end{itemize}
-	Self-learning framework
+	Self-learning framework \cite{artetxe2017learning}
 	\begin{enumerate}
 		\item Given source and target embedding ${\mathcal{F}}$ ${\mathcal{E}}$ , seed dictionary $D$
-		\item Learn mapping with dictionary
-		\item Induce dictionary according to mapping
-		\item Repeat step $2$, $3$ until converges\\
+		\item Learn mapping with dictionary $D$
+		\item Induce dictionary $D^{\prime}$ according to mapping
+		\item ${D:=D^{\prime}}$ and repeat step $2$, $3$ until converges\\
 	\end{enumerate}
 	
 	Performance
 	\begin{itemize}
-		\item Model works with initial dictionary		
-		\item Achieve comparable accuracy as supervised method
+		\item Works with initial dictionary		
+		\item Achieves comparable accuracy as supervised method
 		\item Stuck in a poor local optimum without initial dictionary
 	\end{itemize}
 	
@@ -418,11 +412,11 @@
 	
 	
 	Discriminator loss
-	\[ \mathcal{L}_D(\theta_D|W) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}(source=1| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}(source=0| e_m)\]
+	\[ \mathcal{L}_D(\theta_D|W) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('source'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('target'| e_m)\]
 	
 	
 	Generator  loss 
-	\[ \mathcal{L}_D(W|\theta_D) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}(source=0| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}(source=1| e_m)\]
+	\[ \mathcal{L}_D(W|\theta_D) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('target'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('source'| e_m)\]
 	
 
 
@@ -474,7 +468,7 @@
 	
 	\headline{Context-aware beam search}
 	\vfill
-	Given a history $h$ of target word before $e$, the score of $e$ to be the translation of $f$:
+	Given a history $h$ of target words before $e$, the score of $e$ to be the translation of $f$:
 	\[ L(e;f,h)=\lambda_{emb}\log q(f,e) + \lambda_{LM} \log p(e|h)\]	
 	\begin{itemize}
 		\item Lexicon score $q(f,e) \in [0,1] $ defined as:
@@ -494,7 +488,7 @@
 		\item Neural network learns to restore more smooth sentence from word-by-word translation\\
 	\end{itemize}
 	 Training criterion
-	\[ L = E_{e_1^I \in E}[-log(e_1^I|noise(e_1^I))]\]
+	\[ \mathcal{L} = E_{e_1^I \in E}[-log(e_1^I|noise(e_1^I))]\]
 	\begin{itemize}
 		\item $E$ denotes target corpus.
 		\item In Seq2Seq training, $e_1^I$ as label, $noise(e_1^I)$  as input 
@@ -520,7 +514,7 @@ Insertion
 	\end{itemize}
 	\item Method
 	\begin{itemize}
-		\item For each position in a sentence, insert a frequent word according from set ${v_{ins}}$ to a probability distribution ${p_{ins}}$
+		\item For each position in a sentence, insert a frequent word according from set ${V_{ins}}$ to a probability distribution ${p_{ins}}$
 		\item Denoising network learns to delete the word when translating
 	\end{itemize}
 	\begin{center}
@@ -717,7 +711,7 @@ Insertion
 			\scalebox{1}{
 			\begin{tabular}{>{\bfseries}c>{\bfseries}c>{\bfseries}c>{\bfseries}r>{\bfseries}c}
 				\toprule
-				$d_\text{per}$ & $p_\text{del}$ & $p_\text{ins}$ & $v_\text{ins}$ & \textsc{Bleu} [\%] \\
+				$d_\text{per}$ & $p_\text{del}$ & $p_\text{ins}$ & $V_\text{ins}$ & \textsc{Bleu} [\%] \\
 				\midrule
 				2 & & & & 14.7\\
 				3 & & & & \leavevmode\color{blue}{14.9}\\
@@ -753,7 +747,7 @@ Motivation
 \end{itemize}
 Phrase detection
 \begin{itemize}
-	\item Phrases formed based on the unigram and bigram counts:\\
+	\item Phrases formed based on the unigram and bigram counts\\
 	\cite{mikolov2013distributed} 
 	\begin{itemize}
 		\item Tune a good threshold value for score
@@ -844,41 +838,6 @@ Phrase detection
 
 \vfill	
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPage
-\headline{LM Supported Cross-lingual Embedding training}
-\vfill
-Motivation
-\begin{itemize}
-	\item Language model help to select candidates, provide better dictionary
-	\item Straightforward modeling, larger dictionary, different mapping types and loss functions\\
-\end{itemize}
-Model
-\begin{itemize}
-	\item Training the mapping with SGD instead of Procrustes analysis
-	\item Dictionary from the sentence translation with LM, instead of induction
-		
-
-
-\end{itemize}
-
-\begin{minipage}[b]{0.5\textwidth}
-			\[ 
-	\left. \begin{array}{c c} 
-	(f_1,& e_1)\\
-	(f_2,& e_2)\\
-	\multicolumn{2}{c}{\vdots}\\
-	(f_N,& e_N)
-	\end{array} \right\} 
-	\Rightarrow D
-	\]
-	
-\end{minipage}
-\begin{minipage}[b]{0.3\textwidth}
-\[\mathcal{L} = \sum_{(f,e)\in D} {\lVert Wf - e \rVert}^2  \]
-\end{minipage}
-
-\vfill
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -910,17 +869,48 @@ embedding depends highly on the frequent word mappings
 		\item Other applications: transfer learning for low-resource LM \cite{adams2017cross}\\
 	\end{itemize}
    
-
-	 Non-linear mapping between source and target
-	 \begin{itemize}
-	 	\item Linear assumption may be too crude
-	 	\item Stochastic gradient descent instead of SVD
-	 	\item Also applies in supervised case
-	 \end{itemize}
+	LM supported cross-lingual embedding training
+	\begin{itemize}
+		\item Straightforward mapping modelling		
+		\item LM improves the dictionary quality
+		\item Larger dictionary (training data)
+		\item Different mapping types and loss functions
+	\end{itemize}
 	\vfill
 
 	
-	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline {Outlook}
+	\vfill
+	Difference
+	\begin{itemize}
+		\item Training the mapping with SGD instead of Procrustes analysis
+		\item Dictionary from the sentence translation with LM, instead of induction\\
+	\end{itemize}
+	Training procedure
+	\begin{enumerate}
+		\item Translate corpus according to current mapping, get the word pairs $D$
+		\item Train the network with $D$ to minimize the mapping distance
+		\item Repeat $1,2$ until converges
+	\end{enumerate}
+
+	\begin{minipage}[b]{0.5\textwidth}
+		\[ 
+		\left. \begin{array}{c c} 
+		(f_1,& e_1)\\
+		(f_2,& e_2)\\
+		\multicolumn{2}{c}{\vdots}\\
+		(f_N,& e_N)
+		\end{array} \right\} 
+		\Rightarrow D
+		\]
+		
+	\end{minipage}
+	\begin{minipage}[b]{0.3\textwidth}
+		\[\mathcal{L} = \sum_{(f,e)\in D} {\lVert Wf - e \rVert}^2  \]
+	\end{minipage}
+	\vfill	
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\FinalPage
