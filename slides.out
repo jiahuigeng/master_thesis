@@ -6,10 +6,10 @@
 \BOOKMARK [0][]{7.0}{Cross-lingual Word Embedding}{}% 6
 \BOOKMARK [0][]{8.0}{Cross-lingual Word Embedding}{}% 7
 \BOOKMARK [0][]{9.0}{Monolingual Embedding}{}% 8
-\BOOKMARK [0][]{10.0}{Supervised Learning}{}% 9
+\BOOKMARK [0][]{10.0}{Learning with Parallel Dictionary}{}% 9
 \BOOKMARK [0][]{11.0}{Procrustes Analysis}{}% 10
-\BOOKMARK [0][]{12.0}{Unsupervised Learning}{}% 11
-\BOOKMARK [0][]{13.0}{Unsupervised Learning}{}% 12
+\BOOKMARK [0][]{12.0}{Learning without Parallel Dictionary}{}% 11
+\BOOKMARK [0][]{13.0}{Learning without Parallel Dictionary}{}% 12
 \BOOKMARK [0][]{14.0}{Adversarial Training}{}% 13
 \BOOKMARK [0][]{15.0}{Dictionary Induction}{}% 14
 \BOOKMARK [0][]{16.0}{Sentence Translation}{}% 15
@@ -19,15 +19,16 @@
 \BOOKMARK [0][]{20.0}{Deletion}{}% 19
 \BOOKMARK [0][]{21.0}{Reordering}{}% 20
 \BOOKMARK [0][]{22.0}{Experiment Settings }{}% 21
-\BOOKMARK [0][]{23.0}{Experiments}{}% 22
-\BOOKMARK [0][]{24.0}{Ablation studies}{}% 23
-\BOOKMARK [0][]{25.0}{Different Training Corpora }{}% 24
-\BOOKMARK [0][]{26.0}{Different Embeddings and Training Vocabulary Size}{}% 25
-\BOOKMARK [0][]{27.0}{Denoising Experiments}{}% 26
-\BOOKMARK [0][]{28.0}{Phrase Embedding}{}% 27
-\BOOKMARK [0][]{29.0}{Phrase Embedding Experiments}{}% 28
-\BOOKMARK [0][]{30.0}{ Source and Target Vocabulary Cut-off}{}% 29
-\BOOKMARK [0][]{31.0}{Conclusions}{}% 30
-\BOOKMARK [0][]{32.0}{Outlook}{}% 31
+\BOOKMARK [0][]{23.0}{Corpus Statistics}{}% 22
+\BOOKMARK [0][]{24.0}{Experiments}{}% 23
+\BOOKMARK [0][]{25.0}{Ablation studies}{}% 24
+\BOOKMARK [0][]{26.0}{Different Training Corpora }{}% 25
+\BOOKMARK [0][]{27.0}{Different Embeddings and Training Vocabulary Size}{}% 26
+\BOOKMARK [0][]{28.0}{Denoising Experiments}{}% 27
+\BOOKMARK [0][]{29.0}{Phrase Embedding}{}% 28
+\BOOKMARK [0][]{30.0}{Phrase Embedding Experiments}{}% 29
+\BOOKMARK [0][]{31.0}{ Source and Target Vocabulary Cut-off}{}% 30
+\BOOKMARK [0][]{32.0}{Conclusions}{}% 31
 \BOOKMARK [0][]{33.0}{Outlook}{}% 32
-\BOOKMARK [0][]{34.0}{LastPage}{}% 33
+\BOOKMARK [0][]{34.0}{Outlook}{}% 33
+\BOOKMARK [0][]{35.0}{LastPage}{}% 34

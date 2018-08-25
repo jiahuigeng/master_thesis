@@ -304,7 +304,7 @@
 	\vfill	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
-	\headline{Supervised Learning}
+	\headline{Learning with Parallel Dictionary}
 	\vfill
 	Assume given
 	\begin{itemize}
@@ -350,7 +350,7 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\NewPage
-	\headline{Unsupervised Learning}
+	\headline{Learning without Parallel Dictionary}
 	\vfill
 	Problem
 	\begin{itemize}
@@ -375,7 +375,7 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
-	\headline{Unsupervised Learning}	
+	\headline{Learning without Parallel Dictionary}	
 	\vfill
 
 		
@@ -412,11 +412,11 @@
 	
 	
 	Discriminator loss
-	\[ \mathcal{L}_D(\theta_D|W) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('source'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('target'| e_m)\]
+	\[ \mathcal{L}_D(\theta_D|W) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('\text{source}'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('\text{target}'| e_m)\]
 	
 	
 	Generator  loss 
-	\[ \mathcal{L}_D(W|\theta_D) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('target'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('source'| e_m)\]
+	\[ \mathcal{L}_W(W|\theta_D) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('\text{target}'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('\text{source}'| e_m)\]
 	
 
 
@@ -469,7 +469,7 @@
 	\headline{Context-aware beam search}
 	\vfill
 	Given a history $h$ of target words before $e$, the score of $e$ to be the translation of $f$:
-	\[ L(e;f,h)=\lambda_{emb}\log q(f,e) + \lambda_{LM} \log p(e|h)\]	
+	\[ \hat{e}_1^N = \argmax\limits_{e_1^N}{\prod_{n=1}^{N}} {p^{\lambda_{LM}}(e_n|e_{n-4}^{n-1}) \cdot q^{\lambda_{emb}}(f_n,e_n)}\]	
 	\begin{itemize}
 		\item Lexicon score $q(f,e) \in [0,1] $ defined as:
 		\[ q(f,e)= \frac{d(f,e)+1}{2}\]
@@ -484,14 +484,14 @@
 \vfill
 	Basic idea
 	\begin{itemize}
-		\item Model ${noise}(e_1^I)$ by injecting artificial noise into clean sentences $e_1^I$
+		\item Model ${\text{noise}}(e_1^I)$ by injecting artificial noise into clean sentences $e_1^I$
 		\item Neural network learns to restore more smooth sentence from word-by-word translation\\
 	\end{itemize}
 	 Training criterion
-	\[ \mathcal{L} = E_{e_1^I \in E}[-log(e_1^I|noise(e_1^I))]\]
+	\[ \mathcal{L} = \sum_{e_1^I \in E}[-\log p(e_1^I|\text{noise}(e_1^I))]\]
 	\begin{itemize}
 		\item $E$ denotes target corpus.
-		\item In Seq2Seq training, $e_1^I$ as label, $noise(e_1^I)$  as input 
+		\item In Seq2Seq training, $e_1^I$ as label, $\text{noise}(e_1^I)$  as input 
 		\item Artificial noise:
 		\begin{itemize}
 			\item insertion, deletion, reordering
@@ -589,33 +589,71 @@ Insertion
 	 
 	\end{itemize}
 	\vfill
+	%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Corpus Statistics}
+	\vfill
+\begin{table}[]
+	\centering
+	\scalebox{0.8}{
+	\begin{tabular}{c|c|c|c|c}
+		\hline
+		\multirow{4}{*}{\textbf{Train}} & \textbf{}              & \textbf{German} & \textbf{English} & \textbf{French} \\ \cline{2-5} 
+		& \textbf{Sentences}     & \textbf{100M}   & \textbf{100M}    & \textbf{100M}   \\ \cline{2-5} 
+		& \textbf{Running Words} & \textbf{1880M}  & \textbf{2360M}   & \textbf{3017M}  \\ \cline{2-5} 
+		& \textbf{Vocabulary}    & \textbf{1254k}  & \textbf{523k}    & \textbf{660k}   \\ \hline
+	\end{tabular}
+	}
+\end{table}
+
+\begin{table}[]
+	\centering
+	\scalebox{0.85}{
+	\begin{tabular}{c|c|c|c|c|c}
+		\hline
+		\multirow{7}{*}{\textbf{Test}} & \textbf{}                      & \multicolumn{2}{c|}{\textbf{\texttt{newstest2016}}}    & \multicolumn{2}{c}{\textbf{\texttt{newstest2014}}}    \\ \cline{3-6} 
+		& \multicolumn{1}{l|}{\textbf{}} & \textbf{German}       & \textbf{English}      & \textbf{French}       & \textbf{English}      \\ \cline{2-6} 
+		& \textbf{Sentences}             & \textbf{2999}         & \textbf{2999}         & \textbf{3003}         & \textbf{3003}         \\ \cline{2-6} 
+		& \textbf{Running Words}         & \textbf{62506}        & \textbf{64619}        & \textbf{81165}        & \textbf{71290}        \\ \cline{2-6} 
+		& \textbf{Vocabulary Size}       & \textbf{11978}        & \textbf{8645}         & \textbf{10899}        & \textbf{9200}         \\ \cline{2-6} 
+		& \textbf{OOV Rates}             & \textbf{4116 (6.6\%)} & \textbf{1643 (2.5\%)} & \textbf{1731 (2.1\%)} & \textbf{1299 (1.8\%)} \\ \cline{2-6} 
+		& \textbf{LM perplexity}         & \textbf{211.0}        & \textbf{109.6}        & \textbf{51.2}         & \textbf{84.6}         \\ \hline
+		\multicolumn{4}{l}{\textbf{Search vocabulary in testing: 50k (src/tgt)}} \\
+
+	\end{tabular}
+	}
+\end{table}
+	\vfill
 %%%%%%%%%%%%%%%
 \NewPage
 \headline{Experiments}
 \vfill
 
 \begin{table}
-	\setcounter{table}{1}
+
 	\caption{Translation results on German$\leftrightarrow$English \texttt{newstest2016} and French$\leftrightarrow$English \texttt{newstest2014}.}
 	\centering
-	\begin{tabular}{>{\bfseries}l>{\bfseries}c>{\bfseries}c>{\bfseries}c>{\bfseries}c>{\bfseries}c}
+	\scalebox{0.9}{
+	\begin{tabular}{>{\bfseries}l>{\bfseries}c>{\bfseries}c>{\bfseries}c>{\bfseries}c}
 		\toprule
-		& OOV & de-en & en-de & fr-en & en-fr\\
-		System & handling  & \textsc{Bleu} [\%] & \textsc{Bleu} [\%] & \textsc{Bleu} [\%] & \textsc{Bleu} [\%]\\
+		 & de-en & en-de & fr-en & en-fr\\
+		System   & \textsc{Bleu} [\%] & \textsc{Bleu} [\%] & \textsc{Bleu} [\%] & \textsc{Bleu} [\%]\\
 		\midrule
-		Word-by-Word & None  & 11.1 & 6.7 & 10.6 & 7.8\\
+		Word-by-Word   & 11.1 & 6.7 & 10.6 & 7.8\\
 		\midrule
-		+ LM (5-gram)  & LM  & 12.9 & 8.9 & 12.7 & 10.0\\
-		&  Copy	& 14.5 & 9.9 & 13.6 & 10.9\\
+	+ LM (5-gram) + tgt w/ high LM score for OOV  & 12.9 & 8.9 & 12.7 & 10.0\\
+	+ LM (5-gram) + copy from src for OOV		& 14.5 & 9.9 & 13.6 & 10.9\\
 		\midrule
-		\hspace{10pt}+ Denoising (RNN) &  & 16.2 & 10.6 & 15.8 & 13.3 \\
-		\hspace{10pt}+ Denoising (Transformer) & & \leavevmode\color{blue}{17.2} & \leavevmode\color{blue}{11.0} & \leavevmode\color{blue}{16.5} & \leavevmode\color{blue}13.9 \\
+		\hspace{10pt}+ Denoising (RNN)  & 16.2 & 10.6 & 15.8 & 13.3 \\
+		\hspace{10pt}+ Denoising (Transformer) & \leavevmode\color{blue}{17.2} & \leavevmode\color{blue}{11.0}& \leavevmode\color{blue}{16.5} & \leavevmode\color{blue}13.9 \\
 		\midrule
-		\cite{lample2017unsupervised} & & 13.3 & 9.6 & 14.3 & 15.1\\
-		\cite{artetxe2017unsupervised} & & - & - & 15.6 & 15.1\\
+		\cite{lample2017unsupervised} & 13.3 & 9.6 & 14.3 & 15.1\\
+		\cite{artetxe2017unsupervised} & - & - & 15.6 & 15.1\\
 		\bottomrule
 	\end{tabular}
-	
+	}
+
+
 	\label{tab:results}
 \end{table}	
 \vfill	
@@ -886,7 +924,7 @@ embedding depends highly on the frequent word mappings
 	Difference
 	\begin{itemize}
 		\item Training the mapping with SGD instead of Procrustes analysis
-		\item Dictionary from the sentence translation with LM, instead of induction\\
+		\item Dictionary from the sentence translation with LM, instead of induction from embedding\\
 	\end{itemize}
 	Training procedure
 	\begin{enumerate}
