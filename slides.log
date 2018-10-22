@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 OCT 2018 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  22 OCT 2018 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,25 +1232,25 @@ zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 78.
+(hyperref)                removing `\\' on input line 80.
  (./slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -1319,13 +1319,13 @@ Package geometry Warning: The marginal notes overrun the paper.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 84.
+LaTeX Info: Redefining \selectfont on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 84.
+Package hyperref Info: Link coloring ON on input line 86.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1335,9 +1335,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count172
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 86.
+LaTeX Info: Redefining \pageref on input line 86.
+LaTeX Info: Redefining \nameref on input line 86.
 
 (./slides.out) (./slides.out)
 \@outlinefile=\write5
@@ -1348,49 +1348,49 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 88.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 90.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <29.86> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 88.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 90.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 88.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 88.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 90.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 88.
-LaTeX Font Info:    Try loading font information for U+msa on input line 88.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 90.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 88.
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 88.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 90.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<./logos/Logo_RWTH_22Feb16.pdf, id=145, 171.64125pt x 48.18pt>
+<./logos/Logo_RWTH_22Feb16.pdf, id=157, 171.64125pt x 48.18pt>
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 91.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 93.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<./logos/Logo_HLT_22Feb16.pdf, id=147, 49.18375pt x 50.1875pt>
+<./logos/Logo_HLT_22Feb16.pdf, id=159, 49.18375pt x 50.1875pt>
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 91.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 93.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [1
 Non-PDF special ignored!
@@ -1402,7 +1402,7 @@ pdf> <./logos/Logo_HLT_22Feb16.pdf>]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 116.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 118.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1410,7 +1410,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 116.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 118.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [2
 
@@ -1418,7 +1418,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 116.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 142.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 144.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1426,7 +1426,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 142.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 144.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [3
 
@@ -1434,7 +1434,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 142.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 170.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 172.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1442,7 +1442,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 170.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 172.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [4
 
@@ -1450,7 +1450,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 170.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 195.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 197.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1458,28 +1458,28 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 195.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 197.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [5
 
 ]
-<crossembedding.png, id=196, 1173.38374pt x 652.4375pt>
+<crossembedding.png, id=208, 1173.38374pt x 652.4375pt>
 File: crossembedding.png Graphic file (type png)
 
 <use crossembedding.png>
-Package pdftex.def Info: crossembedding.png used on input line 206.
+Package pdftex.def Info: crossembedding.png used on input line 208.
 (pdftex.def)             Requested size: 398.33858pt x 221.48732pt.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 207.
- <cross-embed.pdf, id=198, 105.39375pt x 154.5775pt>
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 209.
+ <cross-embed.pdf, id=210, 105.39375pt x 154.5775pt>
 File: cross-embed.pdf Graphic file (type pdf)
 
 <use cross-embed.pdf>
-Package pdftex.def Info: cross-embed.pdf used on input line 212.
+Package pdftex.def Info: cross-embed.pdf used on input line 214.
 (pdftex.def)             Requested size: 155.91872pt x 228.68617pt.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 220.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 222.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1488,14 +1488,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 220.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 222.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [6
 
  <./crossembedding.png> <./cross-embed.pdf>]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 255.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 257.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1503,7 +1503,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 255.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 257.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
 
 [7
@@ -1511,7 +1511,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 255.
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 287.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 289.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1519,20 +1519,20 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 287.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 289.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
 
 [8
 
-] <skip.jpg, id=229, 1485.55pt x 899.36pt>
+] <skip.jpg, id=241, 1485.55pt x 899.36pt>
 File: skip.jpg Graphic file (type jpg)
  <use skip.jpg>
-Package pdftex.def Info: skip.jpg used on input line 299.
+Package pdftex.def Info: skip.jpg used on input line 301.
 (pdftex.def)             Requested size: 526.559pt x 318.78786pt.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 306.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 308.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1540,14 +1540,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 306.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 308.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [9
 
  <./skip.jpg>]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 330.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 332.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1556,26 +1556,26 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 330.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 332.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [10
 
 ]
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 345.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 347.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 345.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 347.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 345.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 347.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 345.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 347.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 352.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 354.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1583,7 +1583,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 352.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 354.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [11
 
@@ -1591,7 +1591,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 352.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 377.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 379.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1599,7 +1599,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 377.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 379.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [12
 
@@ -1607,7 +1607,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 377.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 401.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 403.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1615,7 +1615,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 401.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 403.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [13
 
@@ -1623,7 +1623,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 401.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 425.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 427.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1631,7 +1631,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 425.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 427.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [14
 
@@ -1639,7 +1639,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 425.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 451.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 453.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1647,7 +1647,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 451.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 453.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [15
 
@@ -1655,7 +1655,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 451.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 467.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 469.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1663,7 +1663,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 467.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 469.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [16
 
@@ -1671,7 +1671,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 467.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 482.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 484.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1679,7 +1679,7 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 482.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 484.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [17
 
@@ -1687,7 +1687,7 @@ Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 482.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 505.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 507.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1695,20 +1695,20 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 505.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 507.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [18
 
 ]
-<insertion.png, id=295, 669.50125pt x 191.71625pt>
+<insertion.png, id=307, 669.50125pt x 191.71625pt>
 File: insertion.png Graphic file (type png)
  <use insertion.png>
-Package pdftex.def Info: insertion.png used on input line 522.
+Package pdftex.def Info: insertion.png used on input line 524.
 (pdftex.def)             Requested size: 601.78664pt x 172.34117pt.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 529.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 531.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1716,19 +1716,19 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 529.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 531.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [19
 
- <./insertion.png>] <deletion.png, id=303, 689.57625pt x 191.71625pt>
+ <./insertion.png>] <deletion.png, id=316, 689.57625pt x 191.71625pt>
 File: deletion.png Graphic file (type png)
 
 <use deletion.png>
-Package pdftex.def Info: deletion.png used on input line 544.
+Package pdftex.def Info: deletion.png used on input line 546.
 (pdftex.def)             Requested size: 601.78664pt x 167.30957pt.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 549.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 551.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1737,20 +1737,20 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 549.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 551.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [20
 
  <./deletion.png>]
-<denoising.pdf, id=311, 379.4175pt x 114.4275pt>
+<denoising.pdf, id=323, 379.4175pt x 114.4275pt>
 File: denoising.pdf Graphic file (type pdf)
  <use denoising.pdf>
-Package pdftex.def Info: denoising.pdf used on input line 563.
+Package pdftex.def Info: denoising.pdf used on input line 565.
 (pdftex.def)             Requested size: 601.78664pt x 181.51108pt.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 571.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 570.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1758,14 +1758,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 571.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 570.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [21
 
  <./denoising.pdf>]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 593.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 588.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1774,18 +1774,16 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 593.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 588.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [22
 
 ]
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 596.
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 609.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <20.74> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 606.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 628.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 617.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1794,18 +1792,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 628.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 617.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [23
 
 ]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 634.
-LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 654.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 661.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 642.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1814,14 +1808,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 661.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 642.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [24
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 675.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 660.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1830,14 +1824,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 675.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 660.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [25
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 700.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 678.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1846,14 +1840,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 700.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 678.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [26
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 743.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 695.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1862,14 +1856,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 743.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 695.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [27
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 780.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 717.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1878,14 +1872,18 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 780.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 717.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [28
 
 ]
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 720.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 733.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 801.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 752.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1894,16 +1892,18 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 801.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 752.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [29
 
 ]
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 804.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 758.
+LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 779.
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 824.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 787.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1912,14 +1912,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 824.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 787.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [30
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 882.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 807.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1928,14 +1928,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 882.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 807.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [31
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 900.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 822.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1944,14 +1944,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 900.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 822.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [32
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 921.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 865.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1960,14 +1960,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 921.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 865.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [33
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 954.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 902.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1976,14 +1976,14 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 954.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 902.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [34
 
 ]
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 960.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 923.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -1992,9 +1992,59 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 960.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 923.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
  [35
+
+]
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 926.
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+ <use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 949.
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 949.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [36
+
+]
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+ <use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 972.
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 972.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [37
+
+]
+File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
+ <use ./logos/Logo_RWTH_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 978.
+(pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
+Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
+ Make it at least 60.98552pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
+
+<use ./logos/Logo_HLT_22Feb16.pdf>
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 978.
+(pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
+ [38
 
 ] (./slides.bbl
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <20.74> not available
@@ -2014,13 +2064,13 @@ File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
 Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 37.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
- [36
+ [39
 
 ])
 File: ./logos/Logo_RWTH_22Feb16.pdf Graphic file (type pdf)
 
 <use ./logos/Logo_RWTH_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 964.
+Package pdftex.def Info: ./logos/Logo_RWTH_22Feb16.pdf used on input line 982.
 (pdftex.def)             Requested size: 101.36172pt x 28.45274pt.
 Package Fancyhdr Warning: \headheight is too small (36.98857pt): 
  Make it at least 60.98552pt.
@@ -2028,32 +2078,32 @@ Package Fancyhdr Warning: \headheight is too small (36.98857pt):
  This may cause the page layout to be inconsistent, however.
 File: ./logos/Logo_HLT_22Feb16.pdf Graphic file (type pdf)
  <use ./logos/Logo_HLT_22Feb16.pdf>
-Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 964.
+Package pdftex.def Info: ./logos/Logo_HLT_22Feb16.pdf used on input line 982.
 (pdftex.def)             Requested size: 41.82813pt x 42.67912pt.
- [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 964.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 964.
+ [40]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 982.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 982.
 
 (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 964.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 982.
 \snap@out=\write6
 \openout6 = `slides.dep'.
 
 
 Dependency list written on slides.dep.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 964.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 982.
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: AB1D99D24267BC1CE88F79ACB5B8C76E;1667.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 964.
+(rerunfilecheck)             Checksum: BD66B0A14F7C41B7ADBBB676A9C2E1DB;1835.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 982.
  ) 
 Here is how much of TeX's memory you used:
- 22323 strings out of 493029
- 394418 string characters out of 6136233
- 495997 words of memory out of 5000000
- 25284 multiletter control sequences out of 15000+600000
- 52307 words of font info for 79 fonts, out of 8000000 for 9000
+ 22347 strings out of 493029
+ 394645 string characters out of 6136233
+ 496007 words of memory out of 5000000
+ 25292 multiletter control sequences out of 15000+600000
+ 56477 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,54p,387b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,54p,387b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -2064,11 +2114,12 @@ e1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type
 /urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
-Output written on slides.pdf (37 pages, 331531 bytes).
+/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on slides.pdf (40 pages, 347991 bytes).
 PDF statistics:
- 497 PDF objects out of 1000 (max. 8388607)
- 428 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 464 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 

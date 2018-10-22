@@ -18,17 +18,20 @@
 \BOOKMARK [0][]{19.0}{Insertion}{}% 18
 \BOOKMARK [0][]{20.0}{Deletion}{}% 19
 \BOOKMARK [0][]{21.0}{Reordering}{}% 20
-\BOOKMARK [0][]{22.0}{Experiment Settings }{}% 21
-\BOOKMARK [0][]{23.0}{Corpus Statistics}{}% 22
-\BOOKMARK [0][]{24.0}{Experiments}{}% 23
-\BOOKMARK [0][]{25.0}{Ablation studies}{}% 24
-\BOOKMARK [0][]{26.0}{Different Training Corpora }{}% 25
-\BOOKMARK [0][]{27.0}{Different Embeddings and Training Vocabulary Size}{}% 26
-\BOOKMARK [0][]{28.0}{Denoising Experiments}{}% 27
-\BOOKMARK [0][]{29.0}{Phrase Embedding}{}% 28
-\BOOKMARK [0][]{30.0}{Phrase Embedding Experiments}{}% 29
-\BOOKMARK [0][]{31.0}{ Source and Target Vocabulary Cut-off}{}% 30
-\BOOKMARK [0][]{32.0}{Conclusions}{}% 31
-\BOOKMARK [0][]{33.0}{Outlook}{}% 32
-\BOOKMARK [0][]{34.0}{Outlook}{}% 33
-\BOOKMARK [0][]{35.0}{LastPage}{}% 34
+\BOOKMARK [0][]{22.0}{Corpus-based Leaning}{}% 21
+\BOOKMARK [0][]{23.0}{Framework}{}% 22
+\BOOKMARK [0][]{24.0}{Online Training Algorithm}{}% 23
+\BOOKMARK [0][]{25.0}{Training Details}{}% 24
+\BOOKMARK [0][]{26.0}{Training Details}{}% 25
+\BOOKMARK [0][]{27.0}{Training Details}{}% 26
+\BOOKMARK [0][]{28.0}{Experiment Settings }{}% 27
+\BOOKMARK [0][]{29.0}{Corpus Statistics}{}% 28
+\BOOKMARK [0][]{30.0}{Experiments: Translation}{}% 29
+\BOOKMARK [0][]{31.0}{Experiments: Cross-lingual Word Embedding}{}% 30
+\BOOKMARK [0][]{32.0}{Ablation studies}{}% 31
+\BOOKMARK [0][]{33.0}{Different Embeddings and Training Vocabulary Size}{}% 32
+\BOOKMARK [0][]{34.0}{Denoising Experiments}{}% 33
+\BOOKMARK [0][]{35.0}{Phrase Embedding}{}% 34
+\BOOKMARK [0][]{36.0}{Phrase Embedding Experiments}{}% 35
+\BOOKMARK [0][]{37.0}{Conclusions}{}% 36
+\BOOKMARK [0][]{38.0}{LastPage}{}% 37

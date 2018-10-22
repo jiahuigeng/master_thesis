@@ -13,7 +13,9 @@
 %\usepackage[noend]{algpseudocode}
 \usepackage[ruled,linesnumbered]{algorithm2e}
 \usepackage{bm}
-
+	\usepackage[
+	singlelinecheck=false % <-- important
+	]{caption}
 
 % slides tunning
 % \setlength{\footskip}{0pt} % default ist +30pt - negative Werte nicht moeglich
@@ -564,9 +566,131 @@ Insertion
 	\end{center}\vspace{0.5em}
 \end{itemize}	
 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Corpus-based Leaning}	
+	\vfill
+	Motivation
+	\begin{itemize}
+		\item Vocabulary-based just looks at the mutual nearest neighbours
+		\item Word frequency should also be accounted
+		\item Assign priority to frequent words\\
+	\end{itemize}
+	Intuition
+	\begin{itemize}
+		\item Integrate the translation task into the learning process of cross-lingual word embedding
+		\item Make use of Language Model
+	\end{itemize}
+	\vfill
 
 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Framework}	
+	\vfill
+
+		\centering
+	\begin{minipage}{.7\linewidth}
+
+			\begin{algorithm}[H]
+				\SetAlgoLined
+				\KwIn{$F$ (source embeddings)}
+				\KwIn{$E$ (target embeddings)}
+				\KwIn{$\textbf{LM}_e$ (language model)}
+				\KwIn{$\mathcal{F}$ (source corpus)}
+				\KwResult{$W$ (embedding mapping)}
+				\While{not converge}{
+					${\ \  \mathcal{E} \leftarrow TRANSLATE(\mathcal{F}, F, E, \textbf{LM}_e)}$ 
+					${W \leftarrow LEARN\_MAPPING(\mathcal{F}, \mathcal{E})}$				
+				}		
+				\caption{Iterative learning of corpus-based approach}
+			\end{algorithm}
+	\end{minipage}
+	\begin{itemize}
+		\item Composes of mapping learning, dictionary induction and corpus translation
+		\item Efficiency turns out to be critical because of the additional translation task 
+	\end{itemize}
+
+	\vfill
 	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Online Training Algorithm}	
+	\vfill
+
+	\centering
+	\begin{minipage}{.7\linewidth}
+		\begin{algorithm}[H]
+			\SetAlgoLined
+			\KwIn{$F$ (source embeddings)}
+			\KwIn{$E$ (target embeddings)}
+			\KwIn{$\textbf{LM}_e$ (language model)}
+			\KwIn{$\mathcal{F}$ (source corpus)}
+			\KwResult{$W$ (embedding mapping) }
+			\While{not converge}{
+				\ \ Generate batch of source sentences $\{f_1^J\}$ from $\mathcal{F}$\\
+				${\{e_1^I\} \leftarrow TRANSLATE(\{f_1^J\}, F, E, \textbf{LM}_e) }$ 
+				${W \leftarrow LEARN\_MAPPING(\{f_1^J\}, \{e_1^I\})}$				
+			}		
+			\caption{Online learning for corpus-based approach}
+		\end{algorithm}
+	\end{minipage}
+	
+	\vfill	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Training Details}	
+	\vfill
+	\begin{itemize}
+		\item Dictionary Induction: CSLS retrieval
+		
+		\item Corpus Translation: Simplified as word-by-word translation
+		
+		\item Optimization Objective 
+		\item Orthogonal Constraint
+		\[ W \leftarrow (1+\beta) W - \beta(WW^\top)W\] 
+		\item Stop Criterion\\
+		average cosine similarity
+			
+	\end{itemize}
+	\vfill
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Training Details}	
+	\vfill
+	\begin{itemize}
+		\item Embedding Normalization\\
+		Centering: mean word embedding should be no bias
+		\item Dictionary Induction\\
+		 CSLS retrieval
+		\item Corpus Translation: Simplified as word-by-word translation\\
+		We use the word-by-word translation framework implemented before, with this translation pair at each position is taken as word translation candidate 
+		
+		\item Optimization Objective \\
+	\[ W = \argmin_{W \in \mathbb{R}^{d \times d}} \frac{1}{{\lvert \tilde{V} \rvert}} \sum_{n=1}^{\lvert \tilde{V} \rvert} l(W\bm{f}_n, \bm{e}_n) \]
+		
+	\end{itemize}
+	\vfill	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Training Details}	
+	\vfill
+	\begin{itemize}
+		\item Orthogonal Constraint
+		\[ W \leftarrow (1+\beta) W - \beta(WW^\top)W\]
+		where $\beta = 0.01$ is suggested, we find the orthogonal constraint make the training procedure converge successfully
+		\item Learning Rate Scheduling 
+		\begin{itemize}
+			\item Starting with initial learning rate for each embedding training step
+			\item Inherit learning rate from last training step
+		\end{itemize}
+		\item Stop Criterion\\
+		Average cosine similarity between top 10k most frequent source words and corresponding translation
+	\end{itemize}
+	\vfill
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
 	\headline{Experiment Settings }	
@@ -626,14 +750,15 @@ Insertion
 	\vfill
 %%%%%%%%%%%%%%%
 \NewPage
-\headline{Experiments}
+\headline{Experiments: Translation}
 \vfill
 
 \begin{table}
 
 	\caption{Translation results on German$\leftrightarrow$English \texttt{newstest2016} and French$\leftrightarrow$English \texttt{newstest2014}.}
-	\centering
+	
 	\scalebox{0.9}{
+		\centering
 	\begin{tabular}{>{\bfseries}l>{\bfseries}c>{\bfseries}c>{\bfseries}c>{\bfseries}c}
 		\toprule
 		 & de-en & en-de & fr-en & en-fr\\
@@ -657,6 +782,27 @@ Insertion
 	\label{tab:results}
 \end{table}	
 \vfill	
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Experiments: Cross-lingual Word Embedding}	
+	\vfill
+	\begin{table}
+		\caption{Cross-lingual Word Retrieval Accuracy}
+		\centering
+		\begin{tabular}{>{\bfseries}l>{\bfseries}l>{\bfseries}c>{\bfseries}c}
+			\hline
+			&                & De-En [\%]& En-De [\%]            \\ \hline
+			\multirow{2}{*}{Corpus-based } & lr scheduler 1 & 60.37 & 60.67            \\ \cline{2-4} 
+			& lr scheduler 2 & 51.50 & \textbackslash{} \\ \hline
+			Corpus-based without LM              & lr scheduler 1 & 54.36 &        \textbackslash{}           \\ \hline
+			Adversarial                            &                & 53.50 &       \textbackslash{}   \\ \hline
+			Adversarial + Refinement               &                & 64.92 & \textbackslash{}    \\ \hline
+			Supervised                             &                & 65.38 & \textbackslash{}  \\ \hline
+		\end{tabular}
+		
+	\end{table}
+	\vfill
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
 	\headline{Ablation studies}	
@@ -671,31 +817,7 @@ Insertion
 		
 	\end{itemize}
 	\vfill
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Different Training Corpora }	
-	\vfill
 
-	\begin{table}[!h]
-		\centering
-		\caption {Word-by-word translation from German to English}
-		\begin{tabular}{>{\bfseries}c>{\bfseries}c>{\bfseries}c}
-			\hline
-			&\textsc{Accuracy} [\%]& \textsc{Bleu} [\%] \\ \hline
-			5M & 44.9  & 9.7  \\ \hline
-			10M & 51.6 & 10.1 \\ \hline
-			50M & 59.4 & 10.8 \\ \hline
-			100M &\leavevmode\color{blue}61.2 & \leavevmode\color{blue}11.2 \\ \hline
-		\end{tabular}
-	
-	\end{table}
-	
-	\begin{itemize}
-		\item Larger corpus improves the word translation accuracy
-		\item Also improves the word-by-word translation
-	\end{itemize}
-	
-	\vfill
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
 	\headline{Different Embeddings and Training Vocabulary Size}
@@ -820,61 +942,6 @@ Phrase detection
 \end{itemize}
 \vfill
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPage
-\headline{	Source and Target Vocabulary Cut-off}
-
-\begin{itemize}
-	\item Limit the vocabulary size,  copy the OOV directly (mainly name entities) 
-	\item Column: source vocabulary size/ row: target vocabulary size
-\end{itemize}
-
-
-\begin{table}
-	\parbox{.5\linewidth}{
-		\centering
-		\caption{Word embedding vocabulary cut-off}
-		\begin{tabular}{>{\bfseries}c >{\bfseries}c >{\bfseries}c >{\bfseries}c } 
-			\hline
-			\textsc{Bleu} [\%]	& 20k & 50k & 100k \\
-			\hline
-			50k &	11.1  & \leavevmode\color{blue}11.3 & 11.2  \\ 
-			\hline
-			100k&	11.2  & 11.2 & 11.1 \\ 			
-			\hline
-			150k&	10.9 & 10.9 & - \\
-			\hline
-		\end{tabular}
-		
-	}
-	\hfill
-	\parbox{.5\linewidth}{
-		\centering
-		\caption{Phrase embedding vocabulary cut-off}
-		\begin{tabular}{>{\bfseries}c >{\bfseries}c >{\bfseries}c >{\bfseries}c } 
-			\hline
-			\textsc{Bleu} [\%]	& 50k & 100k & 150k \\
-			\hline
-			50k &	11.3  & - & -  \\ 
-			\hline
-			100k&	11.9  & 11.9 & - \\ 			
-			\hline
-			150k&	\leavevmode\color{blue}12.0 & 11.9 & 11.9 \\
-			\hline
-			200k & 12.0 & - & - \\
-			\hline
-		\end{tabular}
-		
-	}
-\end{table}
-
-\begin{itemize}
-	\item Vocabulary size affects the translation performance slightly
-\end{itemize}
-
-
-
-\vfill	
 
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -896,59 +963,10 @@ embedding depends highly on the frequent word mappings
 		\item Phrase embedding only helps in word-by-word translation with LM
 	\end{itemize}
 	\vfill
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline {Outlook}
-	\vfill
-	Goal: Improve the unsupervised learning for cross-lingual embedding
 
-	\begin{itemize}
-		\item Accordingly improves unsupervised MT performance
-		\item Other applications: transfer learning for low-resource LM \cite{adams2017cross}\\
-	\end{itemize}
-   
-	LM supported cross-lingual embedding training
-	\begin{itemize}
-		\item Straightforward mapping modelling		
-		\item LM improves the dictionary quality
-		\item Larger dictionary (training data)
-		\item Different mapping types and loss functions
-	\end{itemize}
-	\vfill
 
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline {Outlook}
-	\vfill
-	Difference
-	\begin{itemize}
-		\item Training the mapping with SGD instead of Procrustes analysis
-		\item Dictionary from the sentence translation with LM, instead of induction from embedding\\
-	\end{itemize}
-	Training procedure
-	\begin{enumerate}
-		\item Translate corpus according to current mapping, get the word pairs $D$
-		\item Train the network with $D$ to minimize the mapping distance
-		\item Repeat $1,2$ until converges
-	\end{enumerate}
-
-	\begin{minipage}[b]{0.5\textwidth}
-		\[ 
-		\left. \begin{array}{c c} 
-		(f_1,& e_1)\\
-		(f_2,& e_2)\\
-		\multicolumn{2}{c}{\vdots}\\
-		(f_N,& e_N)
-		\end{array} \right\} 
-		\Rightarrow D
-		\]
-		
-	\end{minipage}
-	\begin{minipage}[b]{0.3\textwidth}
-		\[\mathcal{L} = \sum_{(f,e)\in D} {\lVert Wf - e \rVert}^2  \]
-	\end{minipage}
-	\vfill	
+	
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\FinalPage
