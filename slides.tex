@@ -48,9 +48,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % main title of the work (used for \TitlePage)
-\renewcommand*{\title}{Unsupervised Learning of Neural Lexicon and Cross-lingual Word Embedding}
+\renewcommand*{\title}{Unsupervised Learning of Cross-lingual Word Embedding and Its Application in Machine Translation}
 % short title (used for \lfoot)
-\renewcommand*{\titleshort}{Unsupervised Learning of Cross-lingual Word Embedding}
+\renewcommand*{\titleshort}{Unsupervised Learning of Cross-lingual Word Embedding and Its Application in MT}
 % (used for \TitlePage)
 \renewcommand*{\occasion}{Master Thesis Mid-term Talk\\}
 % short occasion title (used for \rfoot)
@@ -128,9 +128,8 @@
 		\end{itemize}
 		\item Goals
 		\begin{itemize}
-			\item Study training details of cross-lingual word embedding
-			\item Build a good unsupervised MT efficiently: combine with other models
 			\item Improve the unsupervised learning algorithm for cross lingual word embedding
+			\item Build a good unsupervised MT efficiently: combine with other models
 		\end{itemize}
 		
 	\end{description}
@@ -155,10 +154,7 @@
 		\begin{itemize}
 			\item A self-learning framework combining embedding mapping and dictionary induction techniques, needs seed dictionary to start
 		\end{itemize}	    
-		\item \cite{hoshen2018iterative} An Iterative Closest Point Method for Unsupervised Word Translation	    
-		\begin{itemize}
-			\item Iterative closest point method for embedding mapping learning
-		\end{itemize}	    
+
 	\end{itemize}
 	
 	
@@ -180,11 +176,7 @@
 		\begin{itemize} 
 			\item Seq2seq model with shared encoder and decoder for both languages, also with denoising autoencoder and back-translation
 		\end{itemize}
-		
-		\item \cite{artetxe2017unsupervised} Phrase-Based \& Neural Unsupervised Machine Translation
-		\begin{itemize}
-			\item Simplifies the architecture and loss function for unsupervised NMT and propose a phrase-based SMT with back-translation
-		\end{itemize}	
+	
 		
 
 	\end{itemize}
@@ -374,29 +366,7 @@
 	\end{itemize}
 	
 	\vfill
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Learning without Parallel Dictionary}	
-	\vfill
 
-		
-	
-	Methods
-	\begin{itemize}
-		\item 	Learn bilingual embeddings without any bilingual evidence (this work)
-		\begin{itemize}
-			\item Adversarial training	\cite{conneau2017word}
-		\end{itemize}
-		\item Design the seed dictionary
-		\begin{itemize}
-			\item Shared words, digits and cognates \cite{artetxe2017learning}
-			\item Design heuristics to 
-			build the seed dictionary \\ \cite{hoshen2018iterative} \cite{artetxe2018robust}
-		\end{itemize}
-		
-	\end{itemize}
-	\vfill
 	
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -421,37 +391,112 @@
 	\[ \mathcal{L}_W(W|\theta_D) = -\frac{1}{N}\sum_{n=1}^{N}\log P_{\theta_D}('\text{target}'| W f_n) - \frac{1}{M}\sum_{m=1}^{M}\log P_{\theta_D}('\text{source}'| e_m)\]
 	
 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Corpus-based Leaning}	
+	\vfill
+	Motivation
+	\begin{itemize}
+		\item Vocabulary-based just looks at the mutual nearest neighbours\\
+	\end{itemize}
+	Intuition
+	\begin{itemize}
+		\item Integrate the translation task into the learning process
+		\item Make use of language model
+	\end{itemize}
+	\vfill
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Online Training Algorithm}	
+	\vfill
+\begin{figure}[ht]
+	\centering
+	\begin{minipage}{.7\linewidth}
+		\begin{algorithm}[H]
+		\SetAlgoLined
+		\KwIn{$F$ (source embeddings)}
+		\KwIn{$E$ (target embeddings)}
+		\KwIn{$\textbf{LM}_e$ (language model)}
+		\KwIn{$\mathcal{F}$ (source corpus)}
+		\KwResult{$W$ (embedding mapping) }
+		\While{not converge}{
+			\ \ Generate batch of source sentences $\{f_1^J\}$ from $\mathcal{F}$\\
+			${\ \{e_1^I\} \leftarrow TRANSLATE(\{f_1^J\}, F, E, \textbf{LM}_e) }$ \\
+			${\ D \leftarrow BUILD\_DICTIONARY(\{f_1^J\}, \{e_1^I\})} $  \\
+			${\ W \leftarrow LEARN\_MAPPING(D)}$				
+		}		
+		\caption{Online learning for corpus-based approach}
+		\end{algorithm}
+	\end{minipage}
+\end{figure}
+
+
+	\vfill	
+	\begin{itemize}
+		\item Composes of mapping learning, training dictionary induction and corpus translation
+		\item Efficiency turns out to be critical because of the additional translation task 
+	\end{itemize}
 
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
-	\headline{Dictionary Induction}
+	\headline{Translation}
 	\vfill
-	Nearest neighbor search
+	Context-aware beam search
 	\begin{itemize}
-		\item Hubness problem: some points (hubs) tends to be nearest neighbors of many points in high-dimensional space\\
+		\item 	Given a history $h$ of target words before $e$, the score of $e$ to be the translation of $f$:
+		\[ \hat{e}_1^N = \argmax\limits_{e_1^N}{\prod_{n=1}^{N}} {p^{\lambda_{LM}}(e_n|e_{n-4}^{n-1}) \cdot q^{\lambda_{emb}}(f_n,e_n)}\]
+		\item Lexicon score 		\[ q(f,e)= \frac{d(f,e)+1}{2}\] \\
+		where $d(f,e)\in [-1,1]$ cosine similarity between $f$ and $e$. In experiments, lexicon score from linear scaling works better than others, e.g. sigmoid or softmax
+		\item Empirically set ${\lambda_{emb}}$  as 1, ${\lambda_{LM}}$ as 0.1
 	\end{itemize}
-	Cross-domain Similarity Local Scaling (CSLS)
-	\begin{itemize}
+		
+	\vfill
 
-		\item Penalize the similarity score of hubs
-			\begin{itemize}
-				\item $N_T(Wf):$ target neighbours for mapped source embedding
-				\item $r_T(W f):$ penalty for hubness
-			\end{itemize}
-	\end{itemize}
-	\[r_T(W f) = \frac{1}{K} \sum_{e \in N_T(Wf)}\textrm{cos}(Wf, e) \]
-	\[ \textrm{CSLS}(Wf, e) = 2\ \textrm{cos}(Wf, e)-r_{T}(Wf)-r_{S}(e)\]\\
-	Bidirection dictionary induction
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Training Dictionary Induction}
+	Intuition
 	\begin{itemize}
-		\item Unidirectional dictionary might lead to local optima
-		\item Include only the mutual nearest neighbors 
+		\item In vocabulary-based training, dictionary always built with nearest neighbor search
+		\item In corpus-based training, using translation pairs
+		\item In our word-by-word translation framework, we build training dictionary directly with word pairs on each position from $(f_1^N, e_1^N)$without considering complex alignment 
+	\end{itemize}
+
+	\[
+	D = 
+	\begin{cases}
+		(f_1, e_1)\\
+		(f_2, e_2)           \\
+		\ \ \ \ 	\cdots\\
+		(f_{N}, e_{N})
+		\end{cases}
+	\]
+	\vfill
+	\vfill
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\NewPage
+	\headline{Training Details}	
+	\vfill
+	\begin{itemize}
+		\item Embedding Normalization\\
+		Centering embedding at each dimension\\
+		\item Orthogonal Constraint
+		\[ W \leftarrow (1+\beta) W - \beta(WW^\top)W\]
+		where $\beta = 0.01$ is suggested, we find the orthogonal constraint make the training procedure converge successfully\\
+		\item Learning Rate Scheduling 
+		Starting with initial learning rate for each embedding training step
+
 	\end{itemize}
 	\vfill
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
-	\headline{Sentence Translation}
+	\headline{Improving Translation with Denoising Autoencoder}
 	\vfill
 	Context-aware Beam Search
 	\begin{itemize}
@@ -465,25 +510,11 @@
 	\end{itemize}	
 	\vfill
 		
+	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
-	
-	\headline{Context-aware beam search}
+	\headline{Denoising}	
 	\vfill
-	Given a history $h$ of target words before $e$, the score of $e$ to be the translation of $f$:
-	\[ \hat{e}_1^N = \argmax\limits_{e_1^N}{\prod_{n=1}^{N}} {p^{\lambda_{LM}}(e_n|e_{n-4}^{n-1}) \cdot q^{\lambda_{emb}}(f_n,e_n)}\]	
-	\begin{itemize}
-		\item Lexicon score $q(f,e) \in [0,1] $ defined as:
-		\[ q(f,e)= \frac{d(f,e)+1}{2}\]
-		where $d(f,e)\in [-1,1]$ cosine similarity between $f$ and $e$. In experiments, lexicon score from linear scaling works better than others, e.g. sigmoid or softmax
-		\item Empirically set ${\lambda_{emb}}$  as 1, ${\lambda_{LM}}$ as 0.1
-	\end{itemize}	
-	\vfill
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPage
-\headline{Denoising}	
-\vfill
 	Basic idea
 	\begin{itemize}
 		\item Model ${\text{noise}}(e_1^I)$ by injecting artificial noise into clean sentences $e_1^I$
@@ -566,131 +597,10 @@ Insertion
 	\end{center}\vspace{0.5em}
 \end{itemize}	
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Corpus-based Leaning}	
-	\vfill
-	Motivation
-	\begin{itemize}
-		\item Vocabulary-based just looks at the mutual nearest neighbours
-		\item Word frequency should also be accounted
-		\item Assign priority to frequent words\\
-	\end{itemize}
-	Intuition
-	\begin{itemize}
-		\item Integrate the translation task into the learning process of cross-lingual word embedding
-		\item Make use of Language Model
-	\end{itemize}
-	\vfill
-
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Framework}	
-	\vfill
-
-		\centering
-	\begin{minipage}{.7\linewidth}
-
-			\begin{algorithm}[H]
-				\SetAlgoLined
-				\KwIn{$F$ (source embeddings)}
-				\KwIn{$E$ (target embeddings)}
-				\KwIn{$\textbf{LM}_e$ (language model)}
-				\KwIn{$\mathcal{F}$ (source corpus)}
-				\KwResult{$W$ (embedding mapping)}
-				\While{not converge}{
-					${\ \  \mathcal{E} \leftarrow TRANSLATE(\mathcal{F}, F, E, \textbf{LM}_e)}$ 
-					${W \leftarrow LEARN\_MAPPING(\mathcal{F}, \mathcal{E})}$				
-				}		
-				\caption{Iterative learning of corpus-based approach}
-			\end{algorithm}
-	\end{minipage}
-	\begin{itemize}
-		\item Composes of mapping learning, dictionary induction and corpus translation
-		\item Efficiency turns out to be critical because of the additional translation task 
-	\end{itemize}
-
-	\vfill
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Online Training Algorithm}	
-	\vfill
 
-	\centering
-	\begin{minipage}{.7\linewidth}
-		\begin{algorithm}[H]
-			\SetAlgoLined
-			\KwIn{$F$ (source embeddings)}
-			\KwIn{$E$ (target embeddings)}
-			\KwIn{$\textbf{LM}_e$ (language model)}
-			\KwIn{$\mathcal{F}$ (source corpus)}
-			\KwResult{$W$ (embedding mapping) }
-			\While{not converge}{
-				\ \ Generate batch of source sentences $\{f_1^J\}$ from $\mathcal{F}$\\
-				${\{e_1^I\} \leftarrow TRANSLATE(\{f_1^J\}, F, E, \textbf{LM}_e) }$ 
-				${W \leftarrow LEARN\_MAPPING(\{f_1^J\}, \{e_1^I\})}$				
-			}		
-			\caption{Online learning for corpus-based approach}
-		\end{algorithm}
-	\end{minipage}
 	
-	\vfill	
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Training Details}	
-	\vfill
-	\begin{itemize}
-		\item Dictionary Induction: CSLS retrieval
-		
-		\item Corpus Translation: Simplified as word-by-word translation
-		
-		\item Optimization Objective 
-		\item Orthogonal Constraint
-		\[ W \leftarrow (1+\beta) W - \beta(WW^\top)W\] 
-		\item Stop Criterion\\
-		average cosine similarity
-			
-	\end{itemize}
-	\vfill
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Training Details}	
-	\vfill
-	\begin{itemize}
-		\item Embedding Normalization\\
-		Centering: mean word embedding should be no bias
-		\item Dictionary Induction\\
-		 CSLS retrieval
-		\item Corpus Translation: Simplified as word-by-word translation\\
-		We use the word-by-word translation framework implemented before, with this translation pair at each position is taken as word translation candidate 
-		
-		\item Optimization Objective \\
-	\[ W = \argmin_{W \in \mathbb{R}^{d \times d}} \frac{1}{{\lvert \tilde{V} \rvert}} \sum_{n=1}^{\lvert \tilde{V} \rvert} l(W\bm{f}_n, \bm{e}_n) \]
-		
-	\end{itemize}
-	\vfill	
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\NewPage
-	\headline{Training Details}	
-	\vfill
-	\begin{itemize}
-		\item Orthogonal Constraint
-		\[ W \leftarrow (1+\beta) W - \beta(WW^\top)W\]
-		where $\beta = 0.01$ is suggested, we find the orthogonal constraint make the training procedure converge successfully
-		\item Learning Rate Scheduling 
-		\begin{itemize}
-			\item Starting with initial learning rate for each embedding training step
-			\item Inherit learning rate from last training step
-		\end{itemize}
-		\item Stop Criterion\\
-		Average cosine similarity between top 10k most frequent source words and corresponding translation
-	\end{itemize}
-	\vfill
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\NewPage
 	\headline{Experiment Settings }	
@@ -790,21 +700,39 @@ Insertion
 	\begin{table}
 		\caption{Cross-lingual Word Retrieval Accuracy}
 		\centering
-		\begin{tabular}{>{\bfseries}l>{\bfseries}l>{\bfseries}c>{\bfseries}c}
+		\begin{tabular}{>{\bfseries}l>{\bfseries}c>{\bfseries}c}
 			\hline
-			&                & De-En [\%]& En-De [\%]            \\ \hline
-			\multirow{2}{*}{Corpus-based } & lr scheduler 1 & 60.37 & 60.67            \\ \cline{2-4} 
-			& lr scheduler 2 & 51.50 & \textbackslash{} \\ \hline
-			Corpus-based without LM              & lr scheduler 1 & 54.36 &        \textbackslash{}           \\ \hline
-			Adversarial                            &                & 53.50 &       \textbackslash{}   \\ \hline
-			Adversarial + Refinement               &                & 64.92 & \textbackslash{}    \\ \hline
-			Supervised                             &                & 65.38 & \textbackslash{}  \\ \hline
+			              & De-En [\%]& \textsc{Bleu} [\%]       \\ \hline
+			Corpus-based                               & 61.14 & 13.3     \\ \hline
+			Corpus-based without LM              & 54.36 &                   \\ \hline
+			Adversarial                                           & 53.50 &    12.7     \\ \hline
+			Adversarial + Refinement                               & 64.92 & 14.5    \\ \hline
+			Supervised                                             & 65.38 & 15.0 \\ \hline
+			Refinement: use nearest neighbor to build training dictionary
 		\end{tabular}
 		
 	\end{table}
 	\vfill
 
-
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Ablation study}	
+\vfill
+\begin{table}
+	\caption{Cross-lingual Word Retrieval Accuracy with frequency filtering and center normalization}
+	\centering
+	\begin{tabular}{>{\bfseries}c>{\bfseries}c>{\bfseries}c}
+		\hline
+		Most frequent vocabulary	& no centering [\%] & centering    [\%]    \\ \hline
+		500                           & 9.79 & 14.8    \\ \hline
+		1000            & 34.16 &          41.25         \\ \hline
+		5000                                           & 58.44 &   59.60    \\ \hline
+		10000                               & 59.52 & 60.14   \\ \hline
+		50000                                           & 60.37 & 61.14 \\ \hline
+	\end{tabular}
+	
+\end{table}
+\vfill
 
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -812,23 +740,44 @@ Insertion
 	\NewPage
 	\headline {Conclusions}
 	\vfill
-	Comprehensive results
+	Corpus-based learning of cross-lingual word embedding
+	\begin{itemize}
+	\item In corpus-based learning, centering normalization improves the performance
+	\item Our method works better than adversarial training but a little behind supervised training and iterative refinement
+	\end{itemize}
+	Unsupervised sentence translation with LM and denoising autoencoder
 	\begin{itemize}
 		\item Context-aware beam search with LM helps the lexicon choice
-		\item Denoising networks aimed at insertion/deletion/reordering noise works for such problems in a small range of sentences\\
-	\end{itemize}
-	Ablation studies
-	\begin{itemize}
-		\item BPE embeddings performs worse than word embeddings, especially with smaller
-		vocabulary size.
-		\item Word-by-word translation with cross-lingual
-embedding depends highly on the frequent word mappings
-		\item Phrase embedding only helps in word-by-word translation with LM
-	\end{itemize}
+	\item Denoising networks aimed at insertion/deletion/reordering noise works for such problems in a small range of sentences\\
+	\end{itemize}In corpus-based learning, centering normalization improves the performance
 	\vfill
 
 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NewPage
+\headline{Appendix}
+\vfill
+\noindent Nearest neighbor search
+\begin{itemize}
+	\item Hubness problem: some points (hubs) tends to be nearest neighbors of many points in high-dimensional space\\
+\end{itemize}
+Cross-domain Similarity Local Scaling (CSLS)
+\begin{itemize}
 	
+	\item Penalize the similarity score of hubs
+	\begin{itemize}
+		\item $N_T(Wf):$ target neighbours for mapped source embedding
+		\item $r_T(W f):$ penalty for hubness
+	\end{itemize}
+\end{itemize}
+\[r_T(W f) = \frac{1}{K} \sum_{e \in N_T(Wf)}\textrm{cos}(Wf, e) \]
+\[ \textrm{CSLS}(Wf, e) = 2\ \textrm{cos}(Wf, e)-r_{T}(Wf)-r_{S}(e)\]\\
+Bidirection dictionary induction
+\begin{itemize}
+	\item Unidirectional dictionary might lead to local optima
+	\item Include only the mutual nearest neighbors 
+\end{itemize}
+\vfill	
 	
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

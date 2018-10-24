@@ -9,24 +9,22 @@
 \BOOKMARK [0][]{10.0}{Learning with Parallel Dictionary}{}% 9
 \BOOKMARK [0][]{11.0}{Procrustes Analysis}{}% 10
 \BOOKMARK [0][]{12.0}{Learning without Parallel Dictionary}{}% 11
-\BOOKMARK [0][]{13.0}{Learning without Parallel Dictionary}{}% 12
-\BOOKMARK [0][]{14.0}{Adversarial Training}{}% 13
-\BOOKMARK [0][]{15.0}{Dictionary Induction}{}% 14
-\BOOKMARK [0][]{16.0}{Sentence Translation}{}% 15
-\BOOKMARK [0][]{17.0}{Context-aware beam search}{}% 16
-\BOOKMARK [0][]{18.0}{Denoising}{}% 17
-\BOOKMARK [0][]{19.0}{Insertion}{}% 18
-\BOOKMARK [0][]{20.0}{Deletion}{}% 19
-\BOOKMARK [0][]{21.0}{Reordering}{}% 20
-\BOOKMARK [0][]{22.0}{Corpus-based Leaning}{}% 21
-\BOOKMARK [0][]{23.0}{Framework}{}% 22
-\BOOKMARK [0][]{24.0}{Online Training Algorithm}{}% 23
-\BOOKMARK [0][]{25.0}{Training Details}{}% 24
-\BOOKMARK [0][]{26.0}{Training Details}{}% 25
-\BOOKMARK [0][]{27.0}{Training Details}{}% 26
-\BOOKMARK [0][]{28.0}{Experiment Settings }{}% 27
-\BOOKMARK [0][]{29.0}{Corpus Statistics}{}% 28
-\BOOKMARK [0][]{30.0}{Experiments: Translation}{}% 29
-\BOOKMARK [0][]{31.0}{Experiments: Cross-lingual Word Embedding}{}% 30
-\BOOKMARK [0][]{32.0}{Conclusions}{}% 31
-\BOOKMARK [0][]{33.0}{LastPage}{}% 32
+\BOOKMARK [0][]{13.0}{Adversarial Training}{}% 12
+\BOOKMARK [0][]{14.0}{Corpus-based Leaning}{}% 13
+\BOOKMARK [0][]{15.0}{Online Training Algorithm}{}% 14
+\BOOKMARK [0][]{16.0}{Translation}{}% 15
+\BOOKMARK [0][]{17.0}{Training Dictionary Induction}{}% 16
+\BOOKMARK [0][]{18.0}{Training Details}{}% 17
+\BOOKMARK [0][]{19.0}{Improving Translation with Denoising Autoencoder}{}% 18
+\BOOKMARK [0][]{20.0}{Denoising}{}% 19
+\BOOKMARK [0][]{21.0}{Insertion}{}% 20
+\BOOKMARK [0][]{22.0}{Deletion}{}% 21
+\BOOKMARK [0][]{23.0}{Reordering}{}% 22
+\BOOKMARK [0][]{24.0}{Experiment Settings }{}% 23
+\BOOKMARK [0][]{25.0}{Corpus Statistics}{}% 24
+\BOOKMARK [0][]{26.0}{Experiments: Translation}{}% 25
+\BOOKMARK [0][]{27.0}{Experiments: Cross-lingual Word Embedding}{}% 26
+\BOOKMARK [0][]{28.0}{Ablation study}{}% 27
+\BOOKMARK [0][]{29.0}{Conclusions}{}% 28
+\BOOKMARK [0][]{30.0}{Appendix}{}% 29
+\BOOKMARK [0][]{31.0}{LastPage}{}% 30
